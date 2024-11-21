@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add New Phone</title>
+    <link rel="stylesheet" href="/static/addphone.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Phone</h1>
+        <h3>Fill The Phone Details</h3>
+        <form action="/AddPhone" method="post">
+            <label for="Model_Number">Model Number:</label>
+            <input type="text" id="Model_Number" required><br>
+            <label for="Model_Name">Model Name:</label>
+            <input type="text" id="Model_Name" required><br>
+            <label for="price">Price:</label>
+            <input type="text" id="price" required><br>
+            <label for="Storage">Storage:</label>
+            <input type="text" id="Storage" required><br>
+            <label for="Display">Display:</label>
+            <input type="text" id="Display" required><br>
+            <label for="RAM">RAM:</label>
+            <input type="text" id="RAM" required><br>
+            <label for="Stock">Stock:</label>
+            <input type="number" id="Stock" required><br>
+            <label for="Company">Company:</label>
+            <select id="Company" name="Company">
+                <option value="Oppo">Oppo</option>
+                <option value="Redmi">Redmi</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Vivo">Vivo</option>
+            </select><br>
+            <button type="submit">Go</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buy New Phone</title>
+        <link rel="stylesheet" href="/static/stylep.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Buy New Phone</h1>
+            <table border="1">
+                <tr>
+                    <th>Model Number</th>
+                    <th>Model Name</th>
+                    <th>Price</th>
+                    <th>RAM</th>
+                    <th>Storage</th>
+                    <th>Display</th>
+                    <th>Remaining Stock</th>
+                </tr>
+                {% for d in u %}
+                <tr>
+                    <td>{{d['M_no']}}</td>
+                    <td>{{d['M_Name']}}</td>
+                    <td>{{d['Price']}}</td>
+                    <td>{{d['RAM']}}</td>
+                    <td>{{d['Storage']}}</td>
+                    <td>{{d['Display']}}</td>
+                    <td>{{d['stock']}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+            <h3>Enter the Model Number to Buy:</h3>
+            <div class="m_no">
+                <form id="no" method="post">
+                    <label for="Model_Number">Model Number:</label>
+                    <input type="text" id="Model_Number" required><br>
+                    <label for="Count">Count:</label>
+                    <input type="number" id="Count" min="1" required><br>
+                    <button type="submit">Buy</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
